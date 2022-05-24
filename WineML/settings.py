@@ -11,8 +11,9 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+
 import django_heroku
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,13 +24,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = 'django-insecure-$wb58h9se9bz(1556!bq0e&rdlhxchmhe%48z9^59&7px++htl'
+SECRET_KEY = 'django-insecure-$wb58h9se9bz(1556!bq0e&rdlhxchmhe%48z9^59&7px++htl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0']
-
+ALLOWED_HOSTS = []
+#'0.0.0.0'
 
 # Application definition
 
@@ -120,11 +121,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
+
 import os
-STATIC_ROOT = os.path.join(BASE_DIR, 'WineApp/static')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'WineApp/static')
 STATIC_URL = '/static/'
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

@@ -2,6 +2,7 @@ import joblib
 
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from joblib import dump, load
 
 # Create your views here.
 rf_model = joblib.load('ml_model/rf_model.joblib')
